@@ -21,7 +21,6 @@
         <configuration>
           <warSourceDirectory>WebContent</warSourceDirectory>
         </configuration>
-        
       </plugin>
     </plugins>
   </build>
