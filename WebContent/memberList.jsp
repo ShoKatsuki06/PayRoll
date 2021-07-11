@@ -4,7 +4,7 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List"%>
 <%@ page import="sample_main.Workman" %>
- <% Workman ab = (Workman)session.getAttribute("id");
+ <% String ab = (String)session.getAttribute("id");
  if(ab == null){
 	 	response.sendRedirect( "AdministratorLogin.jsp" );
 	 	return;
