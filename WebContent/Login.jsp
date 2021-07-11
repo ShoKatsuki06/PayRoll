@@ -16,6 +16,7 @@
 </form>
 <br>
 
+
 <a href="http://localhost:8080/PayRoll/html/newgenerate.html">新規登録はこちら</a>
 <a href="AdministratorLogin.jsp">管理ページ</a>
 </body>
