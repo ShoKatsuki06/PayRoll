@@ -41,7 +41,8 @@ public class login extends HttpServlet {
 		 ab.setPass(pass);
 
 		 AccountDAO ad = new AccountDAO();
-		 AccountBeans returnAb = ad.findAccount(ab);
+		 AccountBeans returnAb = null;
+		returnAb = ad.findAccount(ab);
 
 		 if(returnAb != null) {
 	            // セッションにアカウント情報＆ロールを登録
