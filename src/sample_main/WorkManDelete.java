@@ -35,7 +35,7 @@ public class WorkManDelete extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 
 		HttpSession hs = req.getSession(true);
-		Workman wr = (Workman)hs.getAttribute("id");
+		String wr = (String) hs.getAttribute("id");
 		 if(wr == null){
 			 	res.sendRedirect( "AdministratorLogin.jsp" );
 			 	return;
@@ -47,7 +47,7 @@ public class WorkManDelete extends HttpServlet {
 
 		final String jdbcId = "root";
 		final String jdbcPass = "root";
-		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee";
+		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee?useUnicode=true&characterEncoding=utf8";
 		PreparedStatement stmt = null;
 
 	    try (Connection con = DriverManager.getConnection(jdbcUrl, jdbcId, jdbcPass)) {

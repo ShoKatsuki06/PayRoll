@@ -10,7 +10,7 @@ public class AsDAO {
 
 	final String jdbcId = "root";
 	final String jdbcPass = "root";
-	final String jdbcUrl = "jdbc:mysql://localhost:3306/employee";
+	final String jdbcUrl = "jdbc:mysql://localhost:3306/employee?useUnicode=true&characterEncoding=utf8";
 
 	public String findAccount(String id,String pass) {
 

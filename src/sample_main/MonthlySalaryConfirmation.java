@@ -44,11 +44,13 @@ public class MonthlySalaryConfirmation extends HttpServlet {
 			 	return;
 			 }
 		String id = ab.getId();
+		System.out.println(id);
 
 		String month = req.getParameter("month");
+		System.out.println(month);
 		final String jdbcId = "root";
 		final String jdbcPass = "root";
-		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee";
+		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee?useUnicode=true&characterEncoding=utf8";
 		String sql = "SELECT * FROM worktime1 WHERE month = ? AND id = ?";
 		Connection con;
 		try {
@@ -62,8 +64,10 @@ public class MonthlySalaryConfirmation extends HttpServlet {
 			int monthSalary = 0;
 
 			while(rs.next()) {
+
 				int salary = rs.getInt("salary");
 
+				System.out.println(salary);
 				monthSalary += salary;
 
 			}
@@ -76,7 +80,7 @@ public class MonthlySalaryConfirmation extends HttpServlet {
 			out.println("月間給料");
 			out.println("</title></head>");
 			out.println("<h1>あなたの給料は"+ monthSalary +"円です</h1>");
-			out.println("<a href=\" http://localhost:8080/PayRoll/loginSuccess.jsp\">メインメニューはこちら</a>");
+			out.println("<a href=\"loginSuccess.jsp\">メインメニューはこちら</a>");
 
 		} catch (SQLException e) {
 			// TODO 自動生成された catch ブロック

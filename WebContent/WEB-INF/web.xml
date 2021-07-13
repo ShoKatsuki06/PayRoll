@@ -11,10 +11,22 @@
  <url-pattern>/Login</url-pattern>
 </servlet-mapping>
 
+    <servlet>
+        <servlet-name>Lgin</servlet-name>
+        <jsp-file>/Login.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Lgin</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+
   <display-name>PayRoll</display-name>
   <welcome-file-list>
     <welcome-file>login.jsp</welcome-file>
-    
+
+
 
   </welcome-file-list>
 </web-app>

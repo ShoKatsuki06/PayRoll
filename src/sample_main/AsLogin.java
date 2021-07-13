@@ -32,6 +32,15 @@ public class AsLogin extends HttpServlet {
 		// TODO Auto-generated method stub
 
 
+
+		}
+
+	/**
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doGet(req, res);
 		String id = req.getParameter("id");
 		String pass = req.getParameter("pass");
 
@@ -49,14 +58,6 @@ public class AsLogin extends HttpServlet {
 			 RequestDispatcher rd = req.getRequestDispatcher("AsError.jsp");
 	         rd.forward(req, res);
 	}
-		}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
 	}
 
 }

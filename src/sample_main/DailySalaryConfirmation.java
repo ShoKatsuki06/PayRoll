@@ -49,7 +49,7 @@ public class DailySalaryConfirmation extends HttpServlet {
 		String day = req.getParameter("day");
 		final String jdbcId = "root";
 		final String jdbcPass = "root";
-		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee";
+		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee?useUnicode=true&characterEncoding=utf8";
 		String sql = "SELECT * FROM worktime1 WHERE month = ? AND id = ? AND day = ?";
 		Connection con;
 		try {

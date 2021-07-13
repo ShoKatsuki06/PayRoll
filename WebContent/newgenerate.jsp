@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ page import="sample_main.AccountBeans" %>
+<%@ page import="java.util.Iterator" %>
 <!DOCTYPE html>
 <html>
 <style>
@@ -33,14 +35,26 @@ body {
    background-position: -100% 0;
   color: #fff;
   }
-
 </style>
-<head>
-<meta charset="UTF-8">
-<title>ログイン失敗</title>
-</head>
-<body>
-<h3>ログインに失敗しました</h3>
-<a href = "Login.jsp"><button>ログインページへ</button></a>
-</body>
+
+
+<head><meta http-equiv="content-type" charset="UTF-8"><title>新規登録</title></head>
+<h3>情報の登録を行います</h3>
+<form action = "./regist" method="get">
+<p>名前:<br>
+<input type = "text" name = "aaa"></p>
+<p>パスワード:<br>
+<input type = "text" name = "bbb"></p>
+<p>勤務先:<br>
+<input type = "text" name = "ccc"></p>
+<p>時給：<br>
+<input type = "text" name = "ddd"></p>
+<p><input type="submit" value="登録"></p>
+</form>
+
+<p><a href="Login.jsp">ログインはこちら</a>
+
+
+
+
 </html>

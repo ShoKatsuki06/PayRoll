@@ -40,7 +40,7 @@ public class List extends HttpServlet {
 
 		final String jdbcId = "root";
 		final String jdbcPass = "root";
-		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee";
+		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee?useUnicode=true&characterEncoding=utf8";
 
 
 

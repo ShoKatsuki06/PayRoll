@@ -35,7 +35,7 @@ public class SalaryChange extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession hs = req.getSession(true);
-		Workman wr = (Workman)hs.getAttribute("id");
+		 Object wr = hs.getAttribute("id");
 		 if(wr == null){
 			 	res.sendRedirect( "AdministratorLogin.jsp" );
 			 	return;
@@ -47,9 +47,11 @@ public class SalaryChange extends HttpServlet {
 
 		int Salary = Integer.parseInt(salary);
 
+		System.out.println(salary);
+
 		final String jdbcId = "root";
 		final String jdbcPass = "root";
-		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee";
+		final String jdbcUrl = "jdbc:mysql://localhost:3306/employee?useUnicode=true&characterEncoding=utf8";
 
 
 

@@ -66,11 +66,44 @@ public class Time extends HttpServlet {
 	    PrintWriter out = res.getWriter();
 
 		out.println("<html>");
+		out.println("<style>\r\n" +
+				"body {\r\n" +
+				"    background: #eeeeee;\r\n" +
+				"    font-family: Meiryo;\r\n" +
+				"    width:700px;\r\n" +
+				"    margin-right: auto;\r\n" +
+				"   margin-left : auto;\r\n" +
+				"  font-size:140%\r\n" +
+				"  }\r\n" +
+				"  p {\r\n" +
+				"  line-height: 28px;\r\n" +
+				"  margin-bottom: 25px;\r\n" +
+				"   margin-right: auto;\r\n" +
+				"   margin-left : auto;\r\n" +
+				"}\r\n" +
+				"+h2 {\r\n" +
+				"  position: relative;\r\n" +
+				"  padding: 1rem .5rem;\r\n" +
+				"}\r\n" +
+				"\r\n" +
+				"h2:after {\r\n" +
+				"  position: absolute;\r\n" +
+				"  bottom: 0;\r\n" +
+				"  left: 0;\r\n" +
+				"  width: 100%;\r\n" +
+				"  height: 6px;\r\n" +
+				"  content: '';\r\n" +
+				"  border-radius: 3px;\r\n" +
+				"  background-image: -webkit-gradient(linear, right top, left top, from(#2af598), to(#009efd));\r\n" +
+				"  background-image: -webkit-linear-gradient(right, #2af598 0%, #009efd 100%);\r\n" +
+				"  background-image: linear-gradient(to left, #2af598 0%, #009efd 100%);\r\n" +
+				"}\r\n" +
+				"</style>");
 		out.println("<head><meta http-equiv=\"content-type\" charset=\"UTF-8\"><title>");
 		out.println("新規登録完了");
 		out.println("</title></head>");
-		out.println("<h1>あなたの給料は"+ tsalary +"円です</h1>");
-		out.println("<a href=\"http://localhost:8080/PayRoll/html/MainMenu.html\">メインメニューはこちら</a>");
+		out.println("<h2>あなたの給料は"+ tsalary +"円です</h2>");
+		out.println("<a href=\"./loginSuccess.jsp\">メインメニューはこちら</a>");
 
 	}
 

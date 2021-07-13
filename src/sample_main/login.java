@@ -31,6 +31,16 @@ public class login extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+	}
+	/**
+	 *
+	 *
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+
+		doGet(req, res);
 		res.setContentType("text/html; charset = UTF-8");
 
 		 String id = req.getParameter("AAA");
@@ -56,16 +66,8 @@ public class login extends HttpServlet {
 	            RequestDispatcher rd = req.getRequestDispatcher("error.jsp");
 	            rd.forward(req, res);
 	        }
-	}
 
-	/**
-	 *
-	 *
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+
 	}
 
 }

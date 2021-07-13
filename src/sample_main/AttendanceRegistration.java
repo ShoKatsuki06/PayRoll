@@ -12,7 +12,7 @@ public class AttendanceRegistration {
 	 public  void regist(String id,String startTime,String endTime,int restTime) throws SQLException, ClassNotFoundException, IOException{
 
 
-			String URL = "jdbc:mysql://localhost:3306/employee";
+			String URL = "jdbc:mysql://localhost:3306/employee?useUnicode=true&characterEncoding=utf8";
 			String User_Name = "root";
 			String Pass = "root";
 			Connection con = null;
